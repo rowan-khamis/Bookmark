@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+        <script src="./js/bootstrap.bundle.min.js"></script>
+    
+
+</head>
+<body>
+   
+    <div class="container m-auto my-5 p-5 ">
+        <div class="title_container d-flex  justify-content-center w-100 mb-5"><h1 class="title text-center"> Bookmarker</h1></div>
+        <h3 class="text-center gradient"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h3>
+        
+
+        <label for="category"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+        <input type="text" id="sName" class="form-control mb-3"placeholder='Bookmarker name' >
+
+        <label for="price"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+        <input type="text" id="url" class="form-control mb-3" placeholder="Website URL">
+
+      <div class="button w-100 text-center">
+    <button id="btnAdd" class="btn btn-danger px-5 m-auto" >Submit</button>
+</div></div>
+    </div>
+    
+    <input type="text" placeholder="Search.." class="form-control w-50 m-auto" id="Search" onkeyup="searchmark()">
+<div class="table w-75 m-auto my-5">
+    <table class="table ">
+        <thead class="text-center">
+            <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Delete</th>
+                
+            </tr>
+        </thead>
+        <tbody id="tableBody" >
+            
+            
+        </tbody>
+    </table>
+</div>
+<div id="message" class="message position-absolute w-100 vh-100 d-flex justify-content-center align-items-center d-none">
+<div class="warrning-mess  bg-white p-3 w-25 ">
+    <header class="d-flex w-100 justify-content-between align-items-center" >
+    <div class="circles d-flex">
+        <i class="fa-solid fa-circle my-3 mx-1" style="color: #f15f5d;"></i>
+        <i class="fa-solid fa-circle my-3 mx-1" style="color: #febe40;"></i>
+        <i class="fa-solid fa-circle my-3 mx-1" style="color: #4db748;"></i>
+      </div>
+      <button class="btn border-0" id="closeBtn">
+        <i class="fa-solid fa-xmark close fs-3"></i>
+      </button>
+    </header>
+<div class="content">
+    <p class="fs-bold pb-2">Site Name or Url is not valid, Please follow the rules below :</p>
+    <ol>
+        <li><i class="fa-solid fa-circle-arrow-right" style="color: #bb4120;"></i> Site name must contain at least 3 characters</li>
+        <li><i class="fa-solid fa-circle-arrow-right" style="color: #bb4120;"></i> Site URL must be a valid one</li>
+    </ol>
+</div>
+</div>
+</div>
+<script src='./js/script.js'></script>    
+</body>
+
+
+</html>
